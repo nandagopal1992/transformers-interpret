@@ -52,7 +52,7 @@ class BaseExplainer(ABC):
         self.word_embeddings = self.model.get_input_embeddings()
         self.position_embeddings = None
         self.token_type_embeddings = None
-
+        self.layout_embeddings = None
         self._set_available_embedding_types()
 
     @abstractmethod
@@ -238,6 +238,8 @@ class BaseExplainer(ABC):
                     self.position_embeddings = self.model_embeddings.position_embeddings
                 if hasattr(self.model_embeddings, "token_type_embeddings"):
                     self.token_type_embeddings = self.model_embeddings.token_type_embeddings
+        if hasattr(model_base, "layout_embeddings"):
+            self.layout_embeddings = model_base.layout_embeddings
 
     def __str__(self):
         s = f"{self.__class__.__name__}("

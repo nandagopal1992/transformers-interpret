@@ -17,3 +17,6 @@ from .explainers.text.zero_shot_classification import (  # noqa: F401
 from .explainers.vision.image_classification import (  # noqa: F401
     ImageClassificationExplainer,
 )
+from .explainers.text.lilt_token_classification import (  # noqa: F401
+    LiLTTokenClassificationExplainer,
+)

@@ -6,3 +6,4 @@ from .sequence_classification import (  # noqa: F401
 )
 from .token_classification import TokenClassificationExplainer  # noqa: F401
 from .zero_shot_classification import ZeroShotClassificationExplainer  # noqa: F401
+from .lilt_token_classification import LiLTTokenClassificationExplainer
